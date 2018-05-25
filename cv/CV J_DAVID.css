@@ -1,0 +1,73 @@
+@font-face {
+	font-family: 'Roboto-Condensed';
+	src: url('Roboto-Condensed.ttf');
+}
+
+body {
+	width: 900px;
+	margin: auto;
+    background: url("../images/bandup.png") fixed repeat-x top, url("../images/bandbottom.png") fixed repeat-x bottom;
+    background-color: #faffeb;
+    font-family: 'Roboto-Condensed', Arial, sans-serif;
+}
+
+h1 {
+    width: 370px;
+	font-size: 4em;
+	font-family: 'Roboto-Condensed', Impact, sans-serif;
+    box-shadow: 4px 4px 7px black;
+}
+
+h3 {
+	font-family: 'Roboto-Condensed', Impact, sans-serif;
+	font-size: 2em;
+	color: maroon;
+}
+
+img {
+    float: right;
+    margin: 2% 10%;
+    border: 3px white outset;
+    border-radius: 7px;
+    box-shadow: 3px 3px 6px black;
+}
+
+section {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin-right: 2%;
+}
+
+ul {
+	font-family: Verdana, Arial, sans-serif;
+	list-style-image: url("puce.png");
+}
+
+#content {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#bloc_section {
+    box-shadow: 4px 4px 15px black;
+}
+
+footer {
+    width: 900px;
+    display: flex;
+    margin-top: 30px;
+    background: url('../images/separateur.png') repeat-x top;
+}
+
+@media all and (max-width: 1024px) {
+
+    #bloc_page {
+        width: auto;
+    }	
+
+    section {
+    	display: block;
+    	width: auto;
+    }
+}

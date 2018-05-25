@@ -1,58 +1,75 @@
-/* Définition des polices personnalisées */
+/*polices personnalisées */
 
 @font-face
 {
     font-family: 'BallparkWeiner';
-    src: url('polices/ballpark.eot');
-    src: url('polices/ballpark.eot?#iefix') format('embedded-opentype'),
-         url('polices/ballpark.woff') format('woff'),
-         url('polices/ballpark.ttf') format('truetype'),
-         url('polices/ballpark.svg#BallparkWeiner') format('svg');
+    src: url('polices/ballpark.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-@font-face
+@font-face 
 {
+    font-family: 'ostrich-regular';
+    src: url('polices/ostrich-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Roboto-Condensed';
-    src: url('polices/Roboto-Condensed.ttf');
+    src: url('polices/Roboto-Condensed.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 /* Eléments principaux de la page */
 
-body
-{
-    background: url('images/fond_jaune.png');
+body {
+    background: url("images/bandup.png") fixed repeat-x top, url("images/bandbottom.png") fixed repeat-x bottom;
+    background-color: #faffeb;
     font-family: 'Roboto-Condensed', Arial, sans-serif;
 }
 
-#bloc_page
-{
+#bloc_page {
     width: 900px;
-    margin: auto;
-    background-color: rgba(220,255,200,0.2);
-    box-shadow: 4px 4px 15px black;
+    margin: auto;   
 }
 
 /* Header */
 
-header
-{
-    width: auto;
-    background: url('images/separateur.png') repeat-x bottom;
-    display: flex;
+header {
+    text-align: left;
 }
 
-#titre_principal
-{
-    display: flex;
-    flex-direction: column;
+#titre_principal {
+    display: flex; 
+    justify-content: space-between;
+    align-items: baseline; 
 }
 
-section h2
-{
+h1 {
+    width: 260px;
+    padding-left: 10px;
+    font-family: 'ostrich-regular', Arial, serif;
+    font-size: 4.5em;
+    box-shadow: 4px 4px 7px black;
+}
+
+#bloc_titre {
+    font-family: 'BallparkWeiner', Arial, serif;
+    font-size: 1.8em;
+}
+
+#cv_link {
+    font-family: 'ostrich-regular', Arial, serif;
+    text-align: right; 
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+section h2 {
     font-family: 'BallparkWeiner', serif;
     font-size: 2.5em;
     font-weight: normal;
@@ -60,137 +77,99 @@ section h2
 }
 
 /* Corps */
-img 
-{
+
+img {
     box-shadow: 4px 4px 7px black;
 }
 
-section
-{
+a {
+    color: rgb(98,209,233);
+}
+
+section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: space-between;
-    align-content: center;   
+    align-content: center;
+    box-shadow: 4px 4px 15px black;   
 }
 
-article
-{
-    margin: 10px 10px;
+article {
+    margin: 30px 10px;
     width: 400px;
     text-align: justify;
 }
 
-#sunbath, #highheels, #mochimaking, #ontheslope, #break, #stoneyes, #backalley
-{
+article p {
+    font-size: 1.15em;
+}
+
+#sunbath, #highheels, #mochimaking, #ontheslope, #break, #stoneyes, #backalley {
     width: 800px;
 }
 
-#autumn
-{
+#autumn {
     width: 800px;
     display: flex;
     justify-content: space-around; 
 }
 
-#festright, #festleft
-{
-    flex-direction: column;
-    justify-content: space-around;    
+#festright, #festleft {
+    flex-direction: column;  
 }
 
-#mochi
-{
+#oldman {
     width: 800px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; 
 }
 
-#slope1
-{
+#oldmanleft, #oldmanright {
+    flex-direction: column;  
+}
+
+#mochi {
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#slope1 {
     display: flex;
     flex-direction: row;
 }
 
-#slope2
-{
+#slope2 {
+    margin-top: 75px;
     width: 580px;
     display: flex;
     flex-direction: column;
 }
 
-article p
-{
-    font-size: 1em;
+footer {
+    width: 1000px;
+    display: flex;
+    padding-top: 25px;
+    background: url('images/separateur.png') repeat-x top;
 }
 
-
-@media all and (max-width: 1024px)
-{
-    #bloc_page
-    {
+@media all and (max-width: 900px) {
+    #bloc_page {
         width: auto;
+
     }
 
-    nav
-    {
-        width: auto;
-        text-align: left;
-    }
-
-    nav ul 
-    {
-        flex-direction: column;
-    }
-    
-    nav li
-    {
-        display: block;
-        padding-left: 4px;
-    }
-    
-    nav a
-    {
-        font-size: 1.1em;
-    }
-    
-    nav a:hover
-    {
-        border-bottom: 0;
-    }
-
-    #banniere_image
-    {
-        display: none;
-    }
-
-    section
-    {
+    section {
         flex-direction: column;
     }
 
-    article, aside
-    {
+    article {
         width: auto;
         display: block;
         margin-bottom: 15px;
     }
-    
-    #fleche_bulle
-    {
-        display: none;
-    }
-    
-    #photo_zozor img
-    {
-        width: 110px;
-        float: right;
-        margin-left: 15px;
-    }
-    
-    aside p:last-child
-    {
-        text-align: center;
-    }
 }
+
+/* voilà! */
